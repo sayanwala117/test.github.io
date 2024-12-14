@@ -27,7 +27,7 @@ nav ul {
     width: 100%;
     list-style: none;
     display: flex;
-    background: rgba(66, 66, 66, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
     justify-content: center;
