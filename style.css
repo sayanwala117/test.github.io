@@ -90,6 +90,41 @@ nav ul li a:hover {
     color: #0075b8;
 }
 
+/*about*/
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between text and image */
+}
+
+.text-content {
+    flex: 1; /* Occupies remaining space */
+    text-align: left;
+}
+
+.image-content {
+    flex: 0 0 400px; /* Fixed width for the image */
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Optional: rounded corners */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center-align text on smaller screens */
+    }
+    
+    .image-content {
+        margin-top: 20px; /* Add space between text and image */
+    }
+}
+
 /* Portfolio Section */
 .logo-row {
     display: flex;
