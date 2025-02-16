@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Jaspreet Jawnada</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,13 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="logo"><a href="https://www.jjawanda.me/test.github.io/">JJawanda</a></div>
+        <div class="logo"><a href="#">JJawanda</a></div>
         <nav class="nav" id="nav-menu">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="files/Resume.pdf" target="_blank">Resume</a></li>
                 <li><a href="mailto:jawa3252@mylaurier.ca">Email</a></li>
             </ul>
         </nav>
@@ -32,13 +33,15 @@
 
     <!-- Landing Section -->
     <section id="landing" class="landing">
-        <h1>Hello! Meet, Jaspreet Jawanda</h1>
+        <h1>Hello, I’m <span class="highlight">Jaspreet Jawanda</span></h1>
         <div class="logo-container">
             <a href="https://www.linkedin.com/in/jaspreet-jawanda-559119308/?originalSubdomain=ca" class="logo-link">
                 <img src="images/Logo.png" alt="Logo" class="circular-logo">
             </a>
         </div>
-        <p>Computer Science | Business Administration</p>
+        <h2 align="center">
+            <img src="https://readme-typing-svg.demolab.com?font=apple+system&size=25&duration=3000&pause=1000&color=fff&center=true&vCenter=true&width=600&height=100&lines=Welcome+To+My+Website;I+am+a+Business+Student;I+am+a+Full-Stack+Engineer;A+Computer+Science+Student;Tech+enthusiast+%26+Tinkerer" alt="Welcome to my profile!"/>
+        </h2>
         <a href="#about" class="scroll-btn">Learn More</a>
     </section>
 
@@ -47,12 +50,17 @@
         <div class="about-content">
             <h2>About Me</h2>
             <p>
-                I am a first-year double-degree student pursuing Computer Science and Business at Wilfrid Laurier University in Ontario, Canada. With a strong foundation in full-stack web development, I specialize in backend database programming and building scalable, reliable applications that address real-world business challenges.
-
-                I have over five years of experience in programming and hardware, consistently honing my skills to deliver innovative solutions. My passion for technology drives me to explore new tools and techniques, enabling me to create efficient systems that merge technical performance with business objectives.
-                
-                Currently, I am focused on advancing my expertise in software development and contributing to projects that require both technical precision and strategic thinking.
+                Hi, I'm Jaspreet Jawnada. A <span class="highlight">Computer Science</span> and <span class="highlight">Business</span> student at <span class="highlight">Wilfrid Laurier University</span>. 
+                I enjoy solving real-world problems with code, collaborating on innovative projects, and exploring new technologies.
+                I've worked on projects like <span class="highlight">SStarty</span> (personalized startup movies for Steam), <span class="highlight">USecDrive</span> (a drive encryption software), 
+                and <span class="highlight">Color-to-Grayscale</span> (a tool for converting images).
+                Currently seeking Summer 2025 Software Development Internships to grow and make an impact!
             </p>
+            <div class = "aboutbutton">
+                <center>
+                    <a href="https://www.linkedin.com/in/jaspreet-jawanda-559119308/" class="about-btn">Connect with me!</a>
+                </center>   
+            </div>
         </div>
         <div class="about-img">
             <img src="images\jjawanda.png" alt="Headshot">
@@ -62,22 +70,25 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>Projects</h2>
-        <p> 
-
-            Here are some of the projects I have worked on. Click on the project name to view the source code on GitHub.
-        
-        </p>
+        <div class="projectabout-content">
+            <p> 
+            Here are some of the projects I have worked on. <span class="highlight">Click</span> on the <span class="highlight">project name</span> to view the source code on <span class="highlight">GitHub</span>.
+            </p>
+        </div>
         <div class="project-list">
             <div class="project">
-                <h3><a href="https://github.com/SAYANWALA4/SStarty">SStarty</a></h3>
+                <img src="images/sstarty.png" alt="Placeholder">
+                <h3><a href="https://github.com/sayanwala117/SStarty">SStarty</a></h3>
                 <p>Steam big picture mode customizer. Program changes the startup movie for steam</p>
             </div>
             <div class="project">
-                <h3><a href="https://github.com/SAYANWALA4/USecDrive">USecDrive</a></h3>
+                <img src="images/usecdrive.png" alt="Placeholder">
+                <h3><a href="https://github.com/sayanwala117/USecDrive">USecDrive</a></h3>
                 <p>Secure your google/one/any drive (cloud storage) by adding an additional layer of encryption </p>
             </div>
             <div class="project">
-                <h3><a href="https://github.com/SAYANWALA4/Color-to-Grayscale">Color-to-Grayscale</a></h3>
+                <img src="images/color.png" alt="Placeholder">
+                <h3><a href="https://github.com/sayanwala117/Color-to-Grayscale">Color-to-Grayscale</a></h3>
                 <p>Converts images from color to black and white using vector image projection, where it finds the average of the three RGB values.</p>
             </div>
         </div>
@@ -87,9 +98,16 @@
     <section id="contact" class="fade-in">
         <div class="container">
             <h2>Connect with Me</h2>
+            <div class="projectabout-content">
+                <p>
+                    I'm constantly exploring ways to innovate and <br>
+                    expand my knowledge in the tech world. <br>
+                    Don't hesitate to get in touch<br>
+                </p>
+            </div>
             <div class="logo-row">
                 <!-- GitHub -->
-                <a href="https://github.com/SAYANWALA4" target="_blank">
+                <a href="https://github.com/sayanwala117" target="_blank">
                     <img src="images/github-logo.png" alt="GitHub" class="logo">
                 </a>
                 <!-- LinkedIn -->
@@ -106,7 +124,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Jaspreet Jawanda. All rights reserved.</p>
+        <p>&copy; 2025 <span class="highlight">Jaspreet Jawanda</span>. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript for Menu Toggle -->
@@ -117,6 +135,34 @@
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
+
+    </script>  
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollButton = document.querySelector(".scroll-btn");
+
+            scrollButton.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                document.querySelector("#about").scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
     </script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollButton = document.querySelector(".scroll-btn");
+
+            scrollButton.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                document.querySelector("#about").scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
