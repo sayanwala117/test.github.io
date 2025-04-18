@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jaspreet Jawanda</title>
+        <link href="images/Logo.png" rel="icon">
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="projects.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <!-- JavaScript -->
+        <script defer src="script.js"></script>
+
+      </head>
+
+      <body class="no-scroll">
+
+        <!-- Loader overlay -->
+        <div id="loader" class="loader">
+          <pre>&gt; Loading<span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></pre>
+        </div>
+
+        <main id="main-content" class="hidden">      
+        <!-- Header -->
+        <header class="header">
+            <div class="prompt-btn"><a href="#">user@jjawanda:~$</a></div>
+            <nav class="nav" id="nav-menu">
+                <div class ="nav-centre">
+                <ul class ="center-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="files/Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="mailto:jawa3252@mylaurier.ca">Email</a></li>
+                </ul>
+                </div>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <img src="images/hero.jpg" alt="Hero Background" class="hero-image">
+            <div class="hero-text">
+            <h2>Hey there!</h2>
+            <h1>I am <span class="highlight">Jaspreet Jawanda.</span></h1>
+            <p class="subtext"><span id="typed"></span></p>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+            </div>
+        </section>
+
+
+            <!--  Experience Section  -->
+            <section id="experience" class="experience">
+                <!-- Tabs -->
+                <div class="timeline-tabs">
+                <button class="tab active" data-target="work">Work</button>
+                <button class="tab" data-target="education">Education</button>
+                </div>
+            
+                <!-- Timeline wrapper -->
+                <div class="timeline-box">
+                <!-- ─── Work list ─── -->
+                <ul id="work" class="timeline-list">
+                    <li class="timeline-item">
+                    <span class="logo">
+                        <img src="images/wlu.png" alt="Agilite">
+                    </span>
+                    <div class="details">
+                        <h4>Oct 2023 – Feb 2024</h4>
+                        <h3>Agilite</h3>
+                        <p>Senior Software Developer</p>
+                    </div>
+                    </li>
+            
+                    <li class="timeline-item">
+                    <span class="logo">
+                        <img src="images/wlu.png" alt="Maxim">
+                    </span>
+                    <div class="details">
+                        <h4>Oct 2021 – Jul 2022</h4>
+                        <h3>Maxim Labs</h3>
+                        <p>Senior Software Developer</p>
+                    </div>
+                    </li>
+            
+                    <!-- keep adding jobs the same way -->
+                </ul>
+            
+                <!-- ─── Education list (hidden by default) ─── -->
+                <ul id="education" class="timeline-list hidden">
+                    <li class="timeline-item">
+                    <span class="logo">
+                        <img src="images/wlu.png" alt="LJMU">
+                    </span>
+                    <div class="details">
+                        <h4>Sep 2024 – Present</h4>
+                        <h3>Wilfrid Laurier University</h3>
+                        <p>BBa, Business Administration</p>
+                    </div>
+                    </li>
+            
+                    <li class="timeline-item">
+                    <span class="logo">
+                        <img src="images/wlu.png" alt="PCE">
+                    </span>
+                    <div class="details">
+                        <h4>Sep 2024 – Present</h4>
+                        <h3>Wilfrid Laurier University</h3>
+                        <p>BSc, Computer Science</p>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+            </section>
+            <!-- /Experience  -->
+  
+
+            <!-- ░░░ Projects ░░░ -->
+            <section id="projects" class="projects">
+
+                <h2 class="section‑title scroll-reveal">
+                <span class="section‑number">2.</span> Some Things I’ve Made
+                </h2>
+            
+                <!-- ─── Project #1 ─── -->
+                <article class="project featured scroll-reveal">
+                <div class="project-image">
+                    <img src="images/usecdrive.png" alt="AniCollection screenshot">
+                </div>
+            
+                <div class="project-content">
+                    <p class="project-label">Featured Project</p>
+                    <h3 class="project-title">AniCollection</h3>
+            
+                    <p class="project-desc">
+                    A platform for creating and sharing anime collections. Users can sign in securely,
+                    store their collection data, and search for anime using the Jikan API.
+                    </p>
+            
+                    <ul class="project-tech">
+                    <li>ReactJS</li><li>Jikan API</li><li>Firebase</li><li>Firestore</li>
+                    </ul>
+            
+                    <div class="project-links">
+                    <a href="https://github.com/yourRepo"  aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://anicollection.app"     aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                </article>
+            
+                <!-- ─── Project #2 (image right) ─── -->
+                <article class="project featured reverse scroll-reveal">
+                <div class="project-image">
+                    <img src="images/sstarty.png" alt="Daily Dose of Tech screenshot">
+                </div>
+            
+                <div class="project-content">
+                    <p class="project-label">Featured Project</p>
+                    <h3 class="project-title">Daily Dose of Tech</h3>
+            
+                    <p class="project-desc">
+                    A Twitter bot that tweets daily tech news by gathering content from Reddit.
+                    Automated with AWS Lambda, the bot gained 10 000+ impressions, increasing
+                    engagement and visibility.
+                    </p>
+            
+                    <ul class="project-tech">
+                    <li>Python</li><li>Tweepy</li><li>AWS Lambda</li>
+                    </ul>
+            
+                    <div class="project-links">
+                    <a href="https://github.com/yourRepo" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/yourBot" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                </article>
+            
+                <!-- Add more <article class="project …"> blocks exactly the same way -->
+            </section>
+            <!-- ░░░ /Projects ░░░ -->
+  
+
+            <!-- Social Links -->
+            <section id="contact" class="fade-in">
+                <div class="container">
+                    <h2>Connect with Me</h2>
+                    <div class="projectabout-content">
+                        <p>
+                            I'm constantly exploring ways to innovate and <br>
+                            expand my knowledge in the tech world. <br>
+                            Don't hesitate to get in touch<br>
+                        </p>
+                    </div>
+                    <div class="logo-row">
+                        <!-- GitHub -->
+                        <a href="https://github.com/sayanwala117" target="_blank">
+                            <img src="images/github-logo.png" alt="GitHub" class="logo">
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/jaspreet-jawanda-559119308/?originalSubdomain=ca" target="_blank">
+                            <img src="images/linkedin-logo.png" alt="LinkedIn" class="logo">
+                        </a>
+                        <!-- Resume -->
+                        <a href="files/Resume.pdf" target="_blank">
+                            <img src="images/resume-logo.png" alt="Resume" class="logo">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2025 <span class="highlight">Jaspreet Jawanda</span>. All rights reserved.</p>
+            </footer>
+
+    </main>
+    </body>
+</html>

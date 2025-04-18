@@ -1,0 +1,615 @@
+/* styles.css */
+/* Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+body {
+    line-height: 1.7;
+    font-family: Consolas, 'Courier New', monospace;
+    background: #000;
+    color: #00FF00;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+
+
+/* Loader overlay ---------------------------------------------------------*/
+.no-scroll        { overflow: hidden; }
+.hidden           { display: none; }
+
+.loader {
+  position: fixed;
+  inset: 0;                     /* top, right, bottom, left = 0 */
+  background: #000;             /* full‑black backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;                /* over everything */
+}
+
+.loader pre {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #00FF00;               /* matrix green */
+}
+
+/* 3 blinking dots */
+@keyframes blink {
+  0%, 20%, 100% { opacity: 1; }
+  30%, 70%      { opacity: 0; }
+}
+.dot           { animation: blink 1s infinite; }
+.dot2          { animation-delay: .2s; }
+.dot3          { animation-delay: .4s; }
+
+/* Fade‑out once the page is loaded */
+.loader.fade-out {
+  opacity: 0;
+  transition: opacity 4.6s ease-out;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 6px rgba(51, 51, 51,0.1);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+  
+  /* Center links: dark grey background with off-white links */
+  .nav-center .center-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    background: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+  .nav-center .center-links li a {
+    background: transparent;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+  }
+  .nav-center .center-links li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile: hide center & contact, show toggle */
+  .nav-right .nav-toggle {
+    display: none;
+    background: #000;
+    color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  .nav-right .nav-toggle:hover {
+    border-color: #00FF00;
+  }
+
+
+  .nav-center .center-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  background: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.nav-center .center-links li a {
+  background: transparent;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+}
+.nav-center .center-links li a:hover {
+  text-decoration: underline;
+}
+
+  .prompt-btn{
+  background: #333;
+  color: #00FF00;
+  border: 1px solid #f0f0f0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+  
+  /* Mobile Menu Styles */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 1rem 2rem;
+    display: none;
+    z-index: 1000;
+  }
+  .mobile-menu.hidden {
+    display: none;
+  }
+  .mobile-menu:not(.hidden) {
+    display: block;
+  }
+  .mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .mobile-menu ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .mobile-menu ul li a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .nav-center,
+    .nav-right .contact-btn {
+      display: none;
+    }
+    .nav-right .nav-toggle {
+      display: inline;
+    }
+    .terminal-nav {
+      padding: 1rem;
+      /* allow nav to wrap so menu drops below */
+      flex-wrap: wrap;
+    }
+  
+      /* Stack nav items vertically */
+      .terminal-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+  
+    /* Make the mobile menu full width and force it below the bar */
+    .mobile-menu {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 0.5rem;
+    }
+  
+  }
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+.nav ul li a {
+    color: #fff;
+    transition: color 0.3s;
+}
+.nav ul li a:hover {
+    color: #ff9800;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background-color: rgba(51, 51, 51, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 6px rgba(51, 51, 51,0.1);
+}
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #333, #555);
+    color: #fff;
+    text-align: center;
+}
+.landing h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.landing p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: #ff9800
+}
+
+.scroll-btn {
+    padding: 0.7rem 1.5rem;
+    background-color: #ff9800;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.scroll-btn:hover {
+    background-color: #e68900;
+}
+
+.logo-container {
+    margin: 50px 0; 
+}
+
+.circular-logo {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    background-color: black; 
+    padding: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circular-logo:hover {
+    transform: scale(1); 
+    box-shadow: 0 0 20px 5px rgba(0, 132, 184, 0.7); 
+}
+
+/* About Section */
+.about, .projects, .contact {
+    padding: 10rem 2rem;
+    text-align: center;
+}
+
+/* ── Projects section — headings ─────────────────────────── */
+.section-title{
+  text-align:center;
+  margin-bottom:4rem;
+  font-size:1.75rem;
+  color:#fff;
+}
+.section-number{
+  color:#00FFCC;
+  font-weight:700;
+}
+
+/* ── Project rows ───────────────────────────────────────── */
+
+/* Center the whole section and stop runaway gaps */
+.projects{
+  max-width:1100px;
+  margin:0 auto;          /* horizontally centred */
+}
+
+/* Make sure each column can shrink / grow safely */
+.project{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:2rem 4rem;          /* row gap, column gap */
+}
+
+/* Always give images a real height so the cell isn't '0px' when a file is missing */
+.project-image{
+  width:100%;
+  aspect-ratio:16/9;      /* reserve space even before load */
+  overflow:hidden;
+}
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;       /* fills the frame, crops if needed */
+  display:block;
+}
+
+.project-content{ max-width:520px; }
+.project-label{
+  font-size:.8rem; font-weight:600; letter-spacing:.05em;
+  color:#00FFCC; margin-bottom:.4rem;
+}
+.project-title{
+  font-size:1.6rem; color:#fff; margin-bottom:.8rem;
+}
+.project-desc{
+  background:#111; color:#bbb; font-size:.95rem;
+  padding:1rem; border-radius:4px;
+  box-shadow:0 5px 10px -5px rgba(0,0,0,.5);
+  margin-bottom:1rem;
+}
+.project-tech{
+  list-style:none; display:flex; flex-wrap:wrap; gap:.6rem 1.2rem;
+  font-size:.8rem; color:#bbb; margin-bottom:1rem;
+}
+.project-links a{
+  font-size:1.25rem; color:#fff; margin-right:1rem;
+  transition:color .25s;
+}
+.project-links a:hover{ color:#00FFCC; }
+
+/* ── Mobile: one clean column, text over image ──────────── */
+@media (max-width: 768px){
+
+  /* Use flex‑column so order is easy and gaps disappear */
+  .project{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.5rem;          /* tighter between projects */
+  }
+
+  /* ensure content is first, image second – no matter 'reverse' */
+  .project-content{ order: 1; }
+  .project-image  { order: 2; margin-top: 1.5rem; }
+
+  /* and force the reverse variant to respect that order */
+  .project.reverse .project-content{ order: 1 !important; text-align: left; }
+  .project.reverse .project-image { order: 2 !important; }
+
+  /* screenshot styling */
+  .project-image{
+    width: 100%;
+    aspect-ratio: 16/9;             /* space reserved before load */
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: blur(3px) brightness(.65);
+  }
+}
+
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.social-links a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+.social-links a img:hover {
+    transform: scale(1.2);
+}
+
+/* Portfolio Section */
+.logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; 
+    margin-top: 40px;
+}
+
+.logo {
+    width: 60px; 
+    height: auto;
+    transition: transform 0.4s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.2); 
+}
+
+#contact {
+    padding-bottom: 100px; 
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 1.5rem; 
+    font-size: 1.5rem; 
+    color: #333; 
+}
+
+/* Footer */
+footer {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+    .nav.active {
+        display: block;
+    }
+    .nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    .nav ul li {
+        margin: 0;
+    }
+    .nav ul li a {
+        font-size: 1.2rem;
+    }
+    .nav ul li a:hover {
+        color: #ff9800;
+    }
+    .project {
+                padding: 15px;
+            }
+}
+
+/* Hero */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #fff;
+    max-width: 50%;
+  }
+  .hero-text h2 { font-size: clamp(1.25rem, 4vw, 2rem); margin-bottom: 0.5rem; }
+  .hero-text h1 { font-size: clamp(2rem, 6vw, 4rem); }
+  .hero-text .highlight { color: #00FF00; }
+  .hero-text .subtext { font-size: clamp(2rem, 4vw, 2.25rem); color: #ccc; margin-top: 0.5rem; }
+
+/* ───────────────── Experience / Timeline ───────────────── */
+.experience { padding: 20rem 2rem; background:#000; }
+
+.timeline-tabs {
+  display:flex; gap:0; max-width:750px; margin:0 auto 1rem;
+  border-radius:8px; overflow:hidden;
+  border:2px solid #646b7a20;            /* faint outline */
+}
+.tab{
+  flex:1; padding:.75rem 0; cursor:pointer;
+  font-weight:600; font-size:1rem; text-align:center;
+  background:#333;   color:#fff;          /* inactive */
+  transition:background .25s;
+}
+.tab.active{ background:#000; }          /* active = pure black */
+
+.timeline-box{
+  max-width:750px; margin:0 auto;
+  padding:2rem 2rem 1rem;
+  border:1px solid #fff; border-radius:8px;
+  background:#111;                       /* faint contrast to body */
+}
+
+.timeline-list{ position:relative; margin:0 0 0 60px; }
+.timeline-list::before{
+  content:""; position:absolute; left:-30px; top:0;
+  width:2px; height:100%; background:#fff;
+}
+
+.timeline-item{ display:flex; gap:1rem; margin-bottom:2rem; }
+.logo{
+  width:48px;height:48px;border-radius:50%;flex-shrink:0;
+  overflow:hidden; display:inline-block; border:2px solid #fff;
+}
+.logo img{ width:100%;height:100%;object-fit:contain; }
+
+.details h4{ font-size:.85rem; color:#bbb; margin-bottom:.15rem; }
+.details h3{ font-size:1.1rem; color:#fff; margin-bottom:.25rem; }
+.details p { font-size:.95rem; color:#bbb; }
+
+/* ── Experience timeline: phone tweaks ───────────────────── */
+@media (max-width: 640px){
+
+  /* 1️⃣  give the content more room */
+  .timeline-list{
+    margin-left: 45px;        /* was 60px */
+  }
+  .timeline-list::before{
+    left: -22px;              /* was -30px (moves the line left) */
+  }
+
+  /* 2️⃣  tighten each entry */
+  .timeline-item{
+    gap: .8rem;               /* narrower gap between logo & text */
+  }
+  .logo{
+    width: 44px;
+    height: 44px;             /* slightly smaller circle */
+  }
+
+  /*  responsive typography so long names wrap nicely */
+  .details h4{ font-size: .8rem; }   /* date line */
+  .details h3{ font-size: 1.05rem; } /* company / school */
+  .details p { font-size: .9rem; }   /* role / degree text */
+}
+
+
+
+/* ─── Scroll‑reveal animation ───────────────── */
+.scroll-reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .6s ease-out, transform .6s ease-out;
+}
+.scroll-reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* utility helpers already in the sheet */
+.hidden{ display:none !important; }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero-section { height: 60vh; }
+    .hero-text { max-width: 60%; left: 5%; }
+  }
+  @media (max-width: 768px) {
+    .nav-center,
+    .nav-right .contact-btn {
+        display: none;
+    }
+    .nav-right .nav-toggle {
+        display: inline;
+    }
+    .hero-section { height: 50vh; }
+    .hero-text { top: 40%; max-width: 80%; }
+  }
+
